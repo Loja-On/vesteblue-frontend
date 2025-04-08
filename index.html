@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VesteBlue</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background: white;
+      color: #1b4b5a;
+    }
+    header {
+      background: #1b4b5a;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+    nav {
+      display: flex;
+      justify-content: space-around;
+      background: #e0f0f4;
+      padding: 0.5rem;
+    }
+    nav a {
+      color: #1b4b5a;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .content {
+      padding: 1rem;
+    }
+    .filtro {
+      margin-bottom: 1rem;
+    }
+    .produto {
+      border: 1px solid #ccc;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      border-radius: 8px;
+    }
+    .carrinho {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #1b4b5a;
+      color: white;
+      padding: 1rem;
+      border-radius: 50%;
+      font-size: 1.2rem;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>VesteBlue</h1>
+  </header>
+  <nav>
+    <a href="#">Início</a>
+    <a href="#">Produtos</a>
+    <a href="#">Promoção</a>
+    <a href="#">Carrinho</a>
+    <a href="#">Sobre</a>
+  </nav>
+  <div class="content">
+    <div class="filtro">
+      <label for="categoria">Filtrar por:</label>
+      <select id="categoria">
+        <option value="todos">Todos</option>
+        <option value="blusa">Blusa</option>
+        <option value="bermuda">Bermuda</option>
+        <option value="calca">Calça</option>
+      </select>
+    </div>
+    <div class="produto">
+      <h2>Blusa Azul</h2>
+      <p>R$ 59,90</p>
+      <button onclick="adicionarCarrinho()">Adicionar ao carrinho</button>
+    </div>
+    <div class="produto">
+      <h2>Calça Jeans</h2>
+      <p>R$ 89,90</p>
+      <button onclick="adicionarCarrinho()">Adicionar ao carrinho</button>
+    </div>
+  </div>
+  <div class="carrinho" onclick="abrirCarrinho()">🛒</div>
+
+  <script>
+    function adicionarCarrinho() {
+      alert("Produto adicionado ao carrinho!");
+    }
+
+    function abrirCarrinho() {
+      alert("Abrindo o carrinho...");
+    }
+  </script>
+</body>
+</html>
